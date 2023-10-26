@@ -33,5 +33,15 @@ namespace Timerbaev_Autoservice
         public virtual ICollection<ClientService> ClientService { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ServicePhoto> ServicePhoto { get; set; }
+
+        internal string ToString(string durationInSeconds)
+        {
+            throw new NotImplementedException();
+        }
+
+        internal string ToString(Service currentServise)
+        {
+            throw new NotImplementedException();
+        }
     }
 }
