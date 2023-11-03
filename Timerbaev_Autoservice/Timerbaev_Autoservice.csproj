@@ -102,6 +102,9 @@
     <Compile Include="ServicePhoto.cs">
       <DependentUpon>TimerbaevModel.tt</DependentUpon>
     </Compile>
+    <Compile Include="SingUpPage.xaml.cs">
+      <DependentUpon>SingUpPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Tag.cs">
       <DependentUpon>TimerbaevModel.tt</DependentUpon>
     </Compile>
@@ -137,6 +140,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="ServicePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="SingUpPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -200,10 +207,15 @@
     <Resource Include="Услуги автосервиса\Шиномонтаж.jpg" />
     <Resource Include="Услуги автосервиса\Электрика.png" />
     <Resource Include="Resources\picture.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="TimerbaevModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>TimerbaevModel.Context.cs</LastGenOutput>
       <DependentUpon>TimerbaevModel.edmx</DependentUpon>
+      <LastGenOutput>TimerbaevModel.Context.cs</LastGenOutput>
     </Content>
     <Content Include="TimerbaevModel.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
@@ -211,9 +223,5 @@
       <LastGenOutput>TimerbaevModel.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
-  </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

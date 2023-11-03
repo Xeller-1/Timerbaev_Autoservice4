@@ -278,5 +278,10 @@ namespace Timerbaev_Autoservice
             
             ChangePage(0, Convert.ToInt32(PageListBox.SelectedItem.ToString()) - 1);
         }
+
+        private void SingUpButton_Click(object sender, RoutedEventArgs e)
+        {
+            Manager.MainFrame.Navigate(new SingUpPage((sender as Button).DataContext as Service));
+        }
     }
 }

@@ -15,11 +15,6 @@ namespace Timerbaev_Autoservice
     
     public partial class Timerbaev_autoserviceEntities : DbContext
     {
-        public Timerbaev_autoserviceEntities()
-            : base("name=Timerbaev_autoserviceEntities")
-        {
-        }
-
         private static Timerbaev_autoserviceEntities _context;
 
         public static Timerbaev_autoserviceEntities GetContext()
@@ -27,7 +22,12 @@ namespace Timerbaev_Autoservice
             if (_context == null)
                 _context = new Timerbaev_autoserviceEntities();
 
-            return _context; 
+            return _context;
+        }
+
+        public Timerbaev_autoserviceEntities()
+            : base("name=Timerbaev_autoserviceEntities")
+        {
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
